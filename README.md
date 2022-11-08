@@ -1,4 +1,4 @@
-LINK: color-changer-github-io.vercel.app
+LINK: https://color-changer-github-io.vercel.app
 
 This application is used to select a color palette in hex format. 
 Here you can choose any color for every taste and use it in your project!
