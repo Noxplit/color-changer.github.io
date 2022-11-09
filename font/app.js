@@ -63,6 +63,8 @@ document.addEventListener('click', event =>{
     node.classList.toggle('fa-lock')
   } else if (type === 'copy'){
     copyToClickBoard(event.target.textContent)
+    createCopied(event.target)
+
   }
   else if (type === 'changeCol') {
     setRandomColors()
@@ -71,6 +73,25 @@ document.addEventListener('click', event =>{
 
 
 })
+
+
+
+function createCopied(event) {
+
+  let newDiv = document.createElement('div')
+  newDiv.textContent='Copied!'
+
+  event.prepend(newDiv)
+
+
+  setTimeout(() => {
+    newDiv.remove()
+  }, 1000);
+
+
+}
+
+
 
 function updateColorsHash(color = []) {
   document.location.hash = color.map(col => {
